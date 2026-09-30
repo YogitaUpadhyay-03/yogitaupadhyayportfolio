@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yogita Upadhyay | UI/UX Designer & Frontend Developer</title>
+<meta name="description" content="Yogita Upadhyay, UI/UX designer and frontend developer. Case studies: WhatsApp Timed Messages, Spotify Sing Mode.">
+<meta property="og:title" content="Yogita Upadhyay | UI/UX Designer &amp; Frontend Developer">
+<meta property="og:description" content="Research-led UI/UX case studies, designed in Figma and built in code.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎨%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--canvas:#e8e8e8;--dot:#c9c9c9;--frame:#fff;--ink:#1e1e1e;--mute:#6b6b6b;--line:#e3e3e3;--ui:#fff;--blue:#0d99ff;--red:#f24e1e;--orange:#ff7262;--purple:#a259ff;--cyan:#1abcfe;--green:#0acf83;--chip:#f3f3f3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--canvas:#2c2c2c;--dot:#3d3d3d;--frame:#1e1e1e;--ink:#f5f5f5;--mute:#a0a0a0;--line:#383838;--ui:#2c2c2c;--chip:#333}}
+:root[data-theme="dark"]{--canvas:#2c2c2c;--dot:#3d3d3d;--frame:#1e1e1e;--ink:#f5f5f5;--mute:#a0a0a0;--line:#383838;--ui:#2c2c2c;--chip:#333}
+*{box-sizing:border-box;margin:0}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 24px)}
+body{background:var(--canvas);background-image:radial-gradient(var(--dot) 1.2px,transparent 1.2px);background-size:24px 24px;color:var(--ink);font:400 16px/1.6 'Public Sans',system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.bar{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);left:50%;transform:translateX(-50%);z-index:20;display:flex;gap:10px;align-items:center;background:#2c2c2c;padding:8px;border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.3),0 0 0 1px rgba(255,255,255,.06)}
+.grp{display:flex;gap:2px;align-items:center}
+.seg{background:#3a3a3a;border-radius:10px;padding:3px}
+.tb{position:relative;display:flex;align-items:center;justify-content:center;height:38px;min-width:38px;padding:0 8px;background:none;border:0;border-radius:9px;color:#fff;cursor:pointer}
+.tb svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.deco{cursor:default}
+button.tb:hover{background:#4a4a4a}
+.move{height:46px;min-width:46px;border-radius:10px}
+.chev{width:10px;height:10px;fill:none;stroke:#fff;stroke-width:1.4;stroke-linecap:round;opacity:.65;margin:0 6px 0 2px}
+.tb.on{background:#4a4a4a;color:var(--blue)}
+.tip{position:absolute;bottom:calc(100% + 14px);left:50%;transform:translateX(-50%);background:#000;color:#fff;font:500 12px 'Public Sans';padding:5px 10px;border-radius:7px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s}
+.tb:hover .tip,.tb:focus-visible .tip{opacity:1}
+.share{display:flex;align-items:center;height:38px;padding:0 16px;background:var(--blue);color:#fff;font:600 13px 'Public Sans';border-radius:9px;text-decoration:none}
+.share:hover{filter:brightness(1.1)}
+.layers{position:fixed;left:16px;top:24px;width:200px;background:var(--ui);border:1px solid var(--line);border-radius:12px;padding:10px;z-index:10;font-size:13px}
+.layers h4{font:600 11px 'Public Sans';color:var(--mute);padding:4px 8px 8px}
+.layers a{display:flex;gap:8px;align-items:center;padding:6px 8px;border-radius:6px;text-decoration:none}
+.layers a:hover,.layers a.on{background:var(--chip)}
+.layers a.on{box-shadow:inset 2px 0 var(--blue)}
+.layers i{width:10px;height:10px;border:1.5px solid var(--mute);border-radius:2px;flex:none}
+main{position:relative;max-width:960px;width:calc(100% - 24px);margin:56px auto 140px;background:var(--frame);border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.12);display:flex;flex-direction:column}
+main::before{content:"Yogita Upadhyay · Portfolio · Desktop";position:absolute;top:-26px;left:2px;font:500 12px 'Public Sans';color:var(--mute)}
+@media (min-width:1240px){main{width:960px;margin-left:calc((100% - 960px)/2 + 100px);margin-right:auto}}
+.fw{position:relative}
+.fl{font:500 12px 'Public Sans';color:var(--mute);margin:0 0 8px 2px;display:flex;gap:8px}
+.fw:hover>.fl,.fw.sel>.fl{color:var(--blue)}
+.frame{position:relative;background:var(--frame);border-radius:4px;padding:56px;box-shadow:0 1px 2px rgba(0,0,0,.12);outline:1.5px solid transparent;transition:outline-color .15s}
+.fw:hover>.frame{outline-color:var(--blue)}
+.frame::before,.frame::after{content:"";position:absolute;width:8px;height:8px;background:#fff;border:1.5px solid var(--blue);opacity:0;transition:opacity .15s}
+.frame::before{top:-5px;left:-5px}.frame::after{bottom:-5px;right:-5px}
+.fw:hover>.frame::before,.fw:hover>.frame::after{opacity:1}
+h1,h2,h3{font-family:'Space Grotesk','Public Sans',sans-serif;line-height:1.05;letter-spacing:-.02em}
+h1{font-size:clamp(44px,8vw,84px);font-weight:700}
+h2{font-size:clamp(30px,5vw,44px);font-weight:700;margin-bottom:16px}
+h3{font-size:22px;font-weight:700;margin-bottom:6px}
+p{max-width:60ch;color:var(--mute)}
+.lead{font-size:19px;margin-top:24px;color:var(--ink)}
+.dots{display:flex;gap:8px;margin-top:32px}
+.dots span{width:18px;height:18px;border-radius:50%}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{background:var(--chip);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:500}
+.btn{display:inline-block;background:var(--ink);color:var(--frame);padding:11px 20px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;margin:24px 10px 0 0}
+.btn.alt{background:var(--chip);color:var(--ink)}
+.cur{position:absolute;pointer-events:none;z-index:5;animation:drift 14s ease-in-out infinite}
+.cur svg{display:block}
+.cur b{display:inline-block;margin:-2px 0 0 14px;padding:2px 8px;border-radius:0 8px 8px 8px;color:#fff;font:500 12px 'Public Sans'}
+.c1{top:22%;right:18%;color:var(--purple)}.c1 b{background:var(--purple)}
+.c2{top:62%;right:38%;color:var(--green);animation-delay:-5s}.c2 b{background:var(--green)}
+.c3{top:78%;right:10%;color:var(--orange);animation-delay:-9s}.c3 b{background:var(--orange)}
+@keyframes drift{0%,100%{transform:translate(0,0)}25%{transform:translate(-90px,40px)}50%{transform:translate(-30px,-50px)}75%{transform:translate(60px,20px)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}
+.card{border:1px solid var(--line);border-radius:10px;padding:20px;position:relative}
+.card .n{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff;font:600 13px 'Public Sans';margin-bottom:12px}
+.card p{font-size:14.5px}
+.mock{margin-top:28px;border-radius:12px;background:linear-gradient(135deg,var(--purple),var(--cyan) 60%,var(--green));padding:36px;display:grid;place-items:center}
+.phone{width:200px;background:#181818;border-radius:26px;padding:18px;color:#fff;font-size:12px}
+.phone .t{font:700 15px 'Space Grotesk';margin-bottom:10px}
+.phone .l{padding:6px 0;opacity:.45}.phone .l.a{opacity:1;font-weight:600}
+.modes{display:flex;gap:6px;margin-top:12px}.modes span{flex:1;text-align:center;padding:6px 0;border-radius:99px;background:#333;font-size:11px}.modes .s{background:var(--green);color:#111;font-weight:600}
+.conf{margin-top:10px;font-size:11px;opacity:.7}
+.bars{height:5px;background:#333;border-radius:9px;margin-top:5px;overflow:hidden}.bars i{display:block;height:100%;width:86%;background:var(--green)}
+.tl{margin-top:24px;border-left:2px solid var(--line);padding-left:20px}
+.tl div{margin-bottom:20px}.tl small{color:var(--blue);font-weight:600}
+.spec{display:none;position:absolute;top:-10px;right:12px;background:var(--red);color:#fff;font:500 11px ui-monospace,monospace;padding:2px 7px;border-radius:4px;z-index:6}
+body.dev .spec{display:block}
+body.dev .frame{outline:1.5px dashed var(--red)}
+body.dev .card{outline:1px dashed var(--purple)}
+.toast{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 90px);left:50%;transform:translateX(-50%);background:#2c2c2c;color:#fff;padding:9px 16px;border-radius:9px;font-size:13px;opacity:0;transition:opacity .2s;z-index:30}
+.toast.show{opacity:1}
+main :is(h1,h2,h3,p,.chip,.tl small){transition:color .25s ease;cursor:default}
+.frame.pf{padding:40px 0 0;overflow:hidden}
+.ph{padding:0 40px}
+.view{overflow-x:auto;overflow-y:hidden;margin-top:12px;scrollbar-width:thin}
+.track{position:relative;display:flex;width:max-content;height:360px;padding:0 40px}
+.rail{position:absolute;left:0;right:0;top:50%;height:2px;background:var(--line)}
+.prog{position:absolute;inset:0;background:var(--blue);transform-origin:left;transform:scaleX(0)}
+.st{position:relative;flex:none;width:var(--sw,300px);height:100%}
+.st .dot{position:absolute;left:13px;top:calc(50% - 7px);width:14px;height:14px;border-radius:50%;background:var(--c);z-index:2}
+.st .stem{position:absolute;left:19px;width:2px;height:34px;background:var(--c)}
+.st.t .stem{bottom:50%;transform-origin:bottom}.st.b .stem{top:50%;transform-origin:top}
+.st .c{position:absolute;left:0;width:calc(100% - 28px)}
+.st.t .c{bottom:calc(50% + 46px)}.st.b .c{top:calc(50% + 46px)}
+.st small{color:var(--c);font-weight:600;font-size:13px}
+.st h3{font-size:20px;margin:2px 0 4px}.st p{font-size:14px}
+.pf.static .view{overflow-x:auto}
+main>.fw>.fl{display:none}
+main .frame{border-radius:0;box-shadow:none;padding:88px 56px}
+main .frame::before,main .frame::after{display:none}
+main .fw:hover>.frame{outline-color:transparent}
+main .fw+.fw>.frame{border-top:1px solid var(--line)}
+main #hero .frame{padding-top:120px;padding-bottom:120px;overflow:hidden}
+main .frame.pf{padding:56px 0 0}
+.stick{background:var(--frame)}
+.stick .frame.pf{width:100%}
+main #process .stick{border-top:1px solid var(--line)}
+#process.static .stick{position:static;height:auto;display:block}
+.btn{position:relative}
+.bsel{position:absolute;inset:-5px;border:1.5px solid var(--blue);border-radius:3px;pointer-events:none;opacity:0;transform:scale(.93);transition:opacity .15s,transform .22s cubic-bezier(.2,.8,.2,1)}
+.bsel i{position:absolute;width:8px;height:8px;background:#fff;border:1.5px solid var(--blue);border-radius:1px}
+.bsel i:nth-child(1){top:-5px;left:-5px}.bsel i:nth-child(2){top:-5px;right:-5px}.bsel i:nth-child(3){bottom:-5px;left:-5px}.bsel i:nth-child(4){bottom:-5px;right:-5px}
+.bsel em{position:absolute;top:calc(100% + 9px);left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font:600 11px 'Public Sans';font-style:normal;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.mc{position:absolute;left:calc(100% - 4px);top:55%;color:var(--purple);pointer-events:none;opacity:0;transform:translate(16px,16px);transition:opacity .15s .05s,transform .3s .05s cubic-bezier(.2,.8,.2,1);z-index:3}
+.mc svg{display:block}
+.mc b{display:inline-block;margin:-2px 0 0 10px;padding:2px 8px;border-radius:0 8px 8px 8px;background:var(--purple);color:#fff;font:600 11px 'Public Sans'}
+.btn:hover .bsel,.btn:focus-visible .bsel{opacity:1;transform:none}
+.btn:hover .mc,.btn:focus-visible .mc{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.bsel,.mc{transition:none}}
+.sub{font-size:26px;margin-top:52px}
+.stat b{display:block;font:700 44px/1 'Space Grotesk',sans-serif;margin-bottom:8px}
+.br{display:grid;grid-template-columns:min(200px,42%) 1fr 20px;gap:12px;align-items:center;font-size:14px;margin:8px 0}
+.br i{display:block;height:10px;width:var(--w);background:var(--blue);border-radius:99px}.br b{font-weight:600}
+.callout{margin-top:28px;padding:24px;border-radius:12px;background:var(--chip);border-left:4px solid var(--purple)}.callout small{color:var(--purple);font-weight:600}.callout p{margin-top:8px}
+.xs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:20px 0 4px}
+.xs>div{border:1px solid var(--line);border-radius:10px;padding:16px}.xs .pick{border-color:var(--green);background:var(--chip)}
+.xs em{font-style:normal;font-weight:700;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;color:#fff;margin-right:8px;font-size:12px}
+.xs .no{background:var(--red)}.xs .mid{background:var(--orange)}.xs .ok{background:var(--green)}.xs b{font-weight:600}.xs p{font-size:14px;margin-top:6px}
+.bub{background:#1f3d36;padding:8px 10px;border-radius:10px 10px 2px 10px;margin:10px 0 0 auto;width:fit-content;font-size:12px}
+.pop{background:#333;border-radius:10px;padding:8px 10px;margin:10px 0 0 auto;width:150px;font-size:11px}.pop b{display:block;font-weight:600}.pop span{opacity:.6}
+.send{width:26px;height:26px;border-radius:50%;background:var(--green);margin:10px 0 0 auto}
+main[hidden]{display:none!important}
+#cs::before{content:"Case study · WhatsApp Timed Messages"}
+#cs2::before{content:"Case study · Spotify Sing Mode"}
+body.cs .layers{display:none}
+.back{display:inline-block;font-size:14px;font-weight:600;text-decoration:none;color:var(--mute);margin-bottom:28px}.back:hover{color:var(--blue)}
+.pcard{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:center;margin-top:8px;padding:24px;border:1px solid var(--line);border-radius:14px;text-decoration:none;transition:border-color .15s}
+.pcard:hover{border-color:var(--blue)}.pcard .mock{margin:0;padding:24px}.pcard h3{font-size:30px}
+.minis{display:flex;gap:24px;flex-wrap:wrap;margin-top:18px}.mini b{display:block;font:700 28px/1 'Space Grotesk',sans-serif}.mini span{font-size:13px;color:var(--mute)}
+@media (max-width:700px){.pcard{grid-template-columns:1fr;padding:16px}}
+.tx{font:600 13px 'Public Sans',sans-serif;text-decoration:none;padding:0 12px}
+a.tb:hover{background:#4a4a4a}
+a.card{display:block;text-decoration:none;color:inherit;transition:border-color .15s}a.card:hover{border-color:var(--blue)}
+a.card small{color:var(--blue);font-weight:600;font-size:13px}
+.dots{align-items:center;gap:10px}
+.sw{width:22px;height:22px;border-radius:50%;border:0;padding:0;background:var(--k);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.sw:hover{transform:scale(1.18)}
+.sw[aria-pressed="true"]{box-shadow:0 0 0 2px var(--frame),0 0 0 4px var(--k)}
+.dh{font-size:13px;color:var(--mute);margin-left:6px}
+*{cursor:url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%2724%27%20height=%2724%27%20viewBox=%270%200%2024%2024%27%3E%3Cpath%20d=%27M6%203v16.5l4.2-4.2%202.8%206.2%202.4-1.1-2.8-6.1h5.9z%27%20fill=%27black%27%20stroke=%27white%27%20stroke-width=%271.5%27%20stroke-linejoin=%27round%27/%3E%3C/svg%3E") 6 3,auto!important}
+a,button,.pcard,.sw,.tb,.btn{cursor:url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%2724%27%20height=%2724%27%20viewBox=%270%200%2024%2024%27%3E%3Cpath%20d=%27M6%203v16.5l4.2-4.2%202.8%206.2%202.4-1.1-2.8-6.1h5.9z%27%20fill=%27%230d99ff%27%20stroke=%27white%27%20stroke-width=%271.5%27%20stroke-linejoin=%27round%27/%3E%3C/svg%3E") 6 3,pointer!important}
+button.tb.act,button.tb.act:hover{background:var(--blue)}
+#ov{position:absolute;left:0;top:0;width:100%;height:0;z-index:15;pointer-events:none}
+#pv{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible}
+#pv path{fill:none;stroke:var(--blue);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+#cap{position:absolute;left:0;top:0;width:100%;height:0;z-index:14;display:none;touch-action:none;cursor:crosshair!important}
+.fo{opacity:0!important;transition:opacity .4s ease}
+#cap[data-t="text"]{cursor:text!important}
+.orc{position:absolute;border:1.5px solid var(--blue);background:color-mix(in srgb,var(--blue) 10%,transparent)}
+.orc em{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font:600 11px 'Public Sans',sans-serif;font-style:normal;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.otx{position:absolute;pointer-events:auto;font:500 18px 'Public Sans',sans-serif;color:var(--ink);min-width:24px;padding:2px 4px;outline:none;white-space:pre}
+.otx:focus{outline:1.5px solid var(--blue)}.otx:empty::before{content:"Type here";opacity:.5}
+.ocm{position:absolute;pointer-events:auto;display:flex;gap:6px;align-items:flex-start}
+.ocm i{width:28px;height:28px;border-radius:14px 14px 14px 2px;background:var(--purple);color:#fff;font:600 12px 'Public Sans',sans-serif;font-style:normal;display:grid;place-items:center;flex:none}
+.ocm span{background:var(--frame);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font:400 14px 'Public Sans',sans-serif;min-width:150px;outline:none;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.ocm span:empty::before{content:"Add a comment";opacity:.5}
+.res{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 84px);z-index:25;width:min(320px,calc(100% - 24px));background:#2c2c2c;color:#fff;border-radius:14px;padding:12px;box-shadow:0 8px 28px rgba(0,0,0,.35);font:500 13px 'Public Sans',sans-serif}
+.res[hidden]{display:none}
+.res h4{font:600 11px 'Public Sans',sans-serif;color:#a0a0a0;margin:8px 6px 4px}
+.res button{display:flex;gap:10px;align-items:center;width:100%;background:none;border:0;color:#fff;padding:6px;border-radius:7px;font:inherit;text-align:left}
+.res button:hover{background:#444}.res i{width:16px;height:16px;border-radius:50%;background:var(--k);flex:none}
+.res span{margin-left:auto;color:#a0a0a0;font-weight:400}.rf{display:flex;padding:6px}
+body.frames main .fw>.fl{display:flex;color:var(--blue)}
+body.frames main .frame{outline:1.5px solid var(--blue)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+.flow span{background:var(--chip);border-left:3px solid var(--c);border-radius:8px;padding:7px 12px;font-weight:600;font-size:13px}
+.flow i{font-style:normal;color:var(--mute)}
+@media (max-width:860px){:root{--sw:250px}.ph{padding:0 22px}.track{padding:0 22px}.layers,.cur{display:none}main .frame{padding:56px 22px}main #hero .frame{padding-top:80px;padding-bottom:80px}.deco{display:none}}
+@media (prefers-reduced-motion:reduce){.cur{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="bar" aria-label="Toolbar">
+  <div class="grp">
+    <button class="tb move act" data-t="move" aria-label="Move tool"><svg viewBox="0 0 20 20" style="fill:#fff;stroke:none"><path d="M5 3l12 7-5.3 1.4L9.5 17z"/></svg><span class="tip">Move · V</span></button><svg class="chev deco" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5L5 6.5 8 3.5"/></svg>
+    <button class="tb deco tool" data-t="frame" aria-label="Frame tool"><svg viewBox="0 0 20 20"><path d="M7 3v14M13 3v14M3 7h14M3 13h14"/></svg><span class="tip">Frame · F</span></button><svg class="chev deco" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5L5 6.5 8 3.5"/></svg>
+    <button class="tb deco tool" data-t="rect" aria-label="Rectangle tool"><svg viewBox="0 0 20 20"><rect x="3.5" y="3.5" width="13" height="13" rx="1.5"/></svg><span class="tip">Rectangle · R</span></button><svg class="chev deco" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5L5 6.5 8 3.5"/></svg>
+    <button class="tb deco tool" data-t="pen" aria-label="Pen tool"><svg viewBox="0 0 20 20"><path d="M10 3l5 7-3 6H8l-3-6z"/><circle cx="10" cy="10" r="1.2"/></svg><span class="tip">Pen · P</span></button><svg class="chev deco" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5L5 6.5 8 3.5"/></svg>
+    <button class="tb deco tool" data-t="text" aria-label="Text tool"><svg viewBox="0 0 20 20"><path d="M4 5.5V3.5h12v2M10 3.5v13M8 16.5h4"/></svg><span class="tip">Text · T</span></button><svg class="chev deco" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5L5 6.5 8 3.5"/></svg>
+    <button class="tb deco tool" data-t="comment" aria-label="Comment tool"><svg viewBox="0 0 20 20"><path d="M10 3a7 7 0 1 0 0 14c1 0 2-.2 3-.6l3.5.6-.6-3.3A7 7 0 0 0 10 3z"/></svg><span class="tip">Comment · C</span></button><svg class="chev deco" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5L5 6.5 8 3.5"/></svg>
+    <button class="tb deco tool" data-t="res" aria-label="Resources tool"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="3" y="12" width="5" height="5" rx="1"/><rect x="12" y="12" width="5" height="5" rx="1"/><path d="M14.5 3.5v5M12 6h5"/></svg><span class="tip">Resources</span></button>
+  </div>
+  <div class="grp seg">
+    <a class="tb tx" href="#about">About</a>
+    <button id="theme" class="tb" aria-label="Toggle theme"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="6.5"/><path d="M10 3.5a6.5 6.5 0 0 0 0 13z" style="fill:currentColor"/></svg><span class="tip">Theme</span></button>
+    <button id="dev" class="tb" aria-pressed="false" aria-label="Dev mode"><svg viewBox="0 0 20 20"><path d="M7 6L3 10l4 4M13 6l4 4-4 4M11 4l-2 12"/></svg><span class="tip">Dev Mode</span></button>
+  </div>
+  <a class="share" href="#contact">Share</a>
+</nav>
+
+<aside class="layers" aria-label="Layers">
+  <h4>Layers</h4>
+  <a href="#hero" class="on"><i></i>Hero</a>
+  <a href="#case"><i></i>Work</a>
+  <a href="#process"><i></i>How I work</a>
+  <a href="#exp"><i></i>Experience</a>
+  <a href="#about"><i></i>About</a>
+  <a href="#certs"><i></i>Certificates</a>
+  <a href="#contact"><i></i>Contact</a>
+</aside>
+
+<main id="home">
+  <section class="fw" id="hero">
+    <div class="fl">Hero · 880 × Hug</div>
+    <div class="frame">
+      <span class="spec">padding: 56px</span>
+      <span class="cur c1"><svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor"><path d="M1 1l13 8-6 1.5L5 17z"/></svg><b>Recruiter</b></span>
+      <span class="cur c2"><svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor"><path d="M1 1l13 8-6 1.5L5 17z"/></svg><b>Engineer</b></span>
+      <span class="cur c3"><svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor"><path d="M1 1l13 8-6 1.5L5 17z"/></svg><b>PM</b></span>
+      <h1>Yogita<br>Upadhyay</h1>
+      <p class="lead">Hi, I’m Yogita, a UI/UX designer focused on understanding users, simplifying complex workflows, and designing thoughtful digital experiences. I combine user research, interaction design and prototyping with frontend knowledge to turn ideas into usable interfaces.</p>
+      <div class="chips"><span class="chip">UI/UX Design</span><span class="chip">Interaction Design</span><span class="chip">User Research</span><span class="chip">AI Product UX</span><span class="chip">Prototyping</span><span class="chip">Frontend</span></div>
+      <div class="dots"><button class="sw" style="--k:var(--red)" data-c="#f24e1e" data-n="Red" aria-label="Accent colour: Red" aria-pressed="false"></button><button class="sw" style="--k:var(--orange)" data-c="#ff7262" data-n="Orange" aria-label="Accent colour: Orange" aria-pressed="false"></button><button class="sw" style="--k:var(--purple)" data-c="#a259ff" data-n="Purple" aria-label="Accent colour: Purple" aria-pressed="false"></button><button class="sw" style="--k:var(--cyan)" data-c="#1abcfe" data-n="Cyan" aria-label="Accent colour: Cyan" aria-pressed="false"></button><button class="sw" style="--k:var(--green)" data-c="#0bb87a" data-n="Green" aria-label="Accent colour: Green" aria-pressed="false"></button><small class="dh">Pick an accent colour</small></div>
+      <a class="btn" href="https://www.behance.net/yogitaupadhyay1703" target="_blank" rel="noopener">View my Behance</a><a class="btn alt" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <section class="fw" id="case">
+    <div class="fl">Selected work</div>
+    <div class="frame">
+      <span class="spec">gap: 32px</span>
+      <h2>Selected work</h2>
+      <a class="pcard" href="#/whatsapp-timed-messages">
+        <div class="mock"><div class="phone"><div class="t">Monica</div><div class="bub">Happy birthday!! 🎂</div><div class="pop"><b>Schedule message</b><span>Tomorrow · 9:00 PM</span></div><div class="send"></div><div class="conf">Long-press Send to schedule</div></div></div>
+        <div>
+          <div class="chips" style="margin:0 0 12px"><span class="chip">Concept project</span><span class="chip">Research</span><span class="chip">Interaction design</span></div>
+          <h3>WhatsApp Timed Messages</h3>
+          <p>People know what they want to say and when, but rely on reminders, drafts and memory to send it. I designed long-press scheduling that fits inside the familiar composer.</p>
+          <div class="minis"><div class="mini"><b>18/19</b><span>wanted to send later</span></div><div class="mini"><b>9/19</b><span>may be busy or asleep</span></div><div class="mini"><b>6/19</b><span>use reminders today</span></div></div>
+          <span class="btn">Read the case study</span>
+        </div>
+      </a>
+      <a class="pcard" href="#/spotify-sing-mode" style="margin-top:16px">
+        <div class="mock" style="background:linear-gradient(135deg,var(--green),var(--cyan))"><div class="phone"><div class="t">Sing Mode</div><div class="l">Line before</div><div class="l a">The line you're singing now</div><div class="l">Line after</div><div class="modes"><span class="s">Full</span><span>Lower</span><span>Minimal</span></div><div class="conf">Vocal level</div></div></div>
+        <div>
+          <div class="chips" style="margin:0 0 12px"><span class="chip">Concept project</span><span class="chip">AI UX</span><span class="chip">Interaction design</span></div>
+          <h3>Spotify Sing Mode</h3>
+          <p>Spotify already lets people follow lyrics, but not really sing along. I explored a lightweight Sing Mode inside the player, with vocal control and AI feedback that explains itself instead of just scoring.</p>
+          <div class="minis"><div class="mini"><b>3</b><span>directions explored</span></div><div class="mini"><b>3</b><span>AI feedback areas</span></div><div class="mini"><b>4</b><span>edge cases considered</span></div></div>
+          <span class="btn">Read the case study</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="fw" id="process">
+    <div class="fl">How I work · Prototype flow</div>
+    <div class="stick"><div class="frame pf" id="pf">
+      <div class="ph"><h2>Process over pretty screens</h2><p>Every project follows the same path, and I keep the messy middle visible. Watch it play out, then scroll the strip to look around.</p></div>
+      <div class="view"><div class="track" id="track"><div class="rail"><i class="prog"></i></div>
+<div class="st t" style="--c:var(--red)"><i class="stem"></i><i class="dot"></i><div class="c"><small>01</small><h3>Understand</h3><p>Problem, users &amp; context.</p></div></div>
+<div class="st b" style="--c:var(--purple)"><i class="stem"></i><i class="dot"></i><div class="c"><small>02</small><h3>Research</h3><p>Evidence, behaviours &amp; pain points.</p></div></div>
+<div class="st t" style="--c:var(--cyan)"><i class="stem"></i><i class="dot"></i><div class="c"><small>03</small><h3>Explore</h3><p>Directions, alternatives &amp; trade-offs.</p></div></div>
+<div class="st b" style="--c:var(--green)"><i class="stem"></i><i class="dot"></i><div class="c"><small>04</small><h3>Test</h3><p>Prototype, feedback &amp; iteration.</p></div></div>
+<div class="st t" style="--c:var(--orange)"><i class="stem"></i><i class="dot"></i><div class="c"><small>05</small><h3>Deliver</h3><p>Final solution, edge cases &amp; validation.</p></div></div>
+</div></div>
+    </div></div>
+  </section>
+
+  <section class="fw" id="exp">
+    <div class="fl">Experience</div>
+    <div class="frame">
+      <h2>Where I've worked</h2>
+      <div class="tl">
+        <div>
+          <small>Oct 2025 to Jan 2026</small>
+          <h3>UI/UX Designer Intern · Aquila Events &amp; Marketing</h3>
+          <p>During my internship, I worked across digital and visual design projects including website design, mobile app flows, brand creatives, social media assets and event collateral.</p>
+          <p style="margin-top:10px">For Promotr, Aquila's in-house digital product, I contributed to UI/UX work across the website and mobile app, including user flows, wireframes and design iterations based on requirements and feedback.</p>
+          <h3 style="font-size:16px;margin-top:24px">Selected work</h3>
+          <div class="chips" style="margin-top:10px"><span class="chip">Promotr: Website Design</span><span class="chip">Promotr: Mobile App Flows</span><span class="chip">Wireframing &amp; User Flows</span><span class="chip">Brand &amp; Marketing Creatives</span><span class="chip">Event Collateral</span></div>
+          <h3 style="font-size:16px;margin-top:24px">My contribution</h3>
+          <div class="flow"><span style="--c:var(--red)">Requirements</span><i>→</i><span style="--c:var(--orange)">User Flows</span><i>→</i><span style="--c:var(--purple)">Wireframes</span><i>→</i><span style="--c:var(--cyan)">UI Design</span><i>→</i><span style="--c:var(--green)">Feedback</span><i>→</i><span style="--c:var(--blue)">Iteration</span></div>
+          <h3 style="font-size:16px;margin-top:24px">What I learned</h3><p>Working on real project requirements taught me to balance <b style="color:var(--ink)">user needs, visual consistency, feedback and practical project constraints</b> rather than designing in isolation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fw" id="about">
+    <div class="fl">About</div>
+    <div class="frame">
+      <span class="spec">padding: 88px</span>
+      <h2>About me</h2>
+      <p class="lead">I'm a UI/UX designer and B.Tech CSE student at GLA who enjoys working at the intersection of design and technology.</p>
+      <p style="margin-top:12px">I like understanding how people use products, turning research into clear interactions, and exploring how those ideas translate into real interfaces.</p>
+      <div class="chips"><span class="chip">UI/UX Design</span><span class="chip">Interaction Design</span><span class="chip">User Research</span><span class="chip">AI UX</span><span class="chip">Frontend</span></div>
+      <div class="grid">
+        <a class="card" href="mailto:yogitaupadhyay172005@gmail.com"><small>Email</small><h3 style="font-size:18px;overflow-wrap:anywhere">yogitaupadhyay172005@gmail.com</h3></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fw" id="certs">
+    <div class="fl">Certificates</div>
+    <div class="frame">
+      <span class="spec">gap: 16px</span>
+      <h2>Certificates</h2>
+      <div class="grid">
+        <a class="card" href="https://coursera.org/share/3e7448d339fcc40e2b254d98c9c937d2" target="_blank" rel="noopener"><small>Meta · 2025</small><h3>Principles of UI/UX Design</h3><p>View on Coursera ↗</p></a>
+        <a class="card" href="https://coursera.org/share/f9f5d3fafe7f09d4a5f155ca77648eec" target="_blank" rel="noopener"><small>Meta · 2025</small><h3>Version Control</h3><p>View on Coursera ↗</p></a>
+        <a class="card" href="https://drive.google.com/file/d/1eT6IEkC1u2A8ssL6dxxLSFLhAZJ-92KE/view?usp=sharing" target="_blank" rel="noopener"><small>GLA University · 2024</small><h3>Participant in Smart India Hackathon</h3><p>View certificate ↗</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fw" id="contact">
+    <div class="fl">Contact</div>
+    <div class="frame">
+      <h2>Let's work on something together</h2>
+      <p>Open to UI/UX design and frontend roles.</p>
+      <a class="btn" href="https://github.com/YogitaUpadhyay-03" target="_blank" rel="noopener">GitHub</a><a class="btn alt" href="https://www.linkedin.com/in/yogita-upadhyay-0020172b0/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</main>
+<main id="cs" hidden>
+  <section class="fw"><div class="frame">
+    <a class="back" href="#case">← Back to portfolio</a>
+      <div class="chips" style="margin:0 0 16px"><span class="chip">Concept project</span><span class="chip">Research</span><span class="chip">Interaction design</span><span class="chip">Prototyping</span></div>
+      <h2>WhatsApp Timed Messages: write it now, send it at the right moment</h2>
+      <p>People often know what they want to say and when it should arrive. But they lean on reminders, drafts and memory, because they may be busy, asleep or forgetful when the moment comes.</p>
+      <div><a class="btn" href="https://www.behance.net/gallery/253591055/WhatsApp-Message-Scheduling-UX-Case-Study" target="_blank" rel="noopener">View on Behance</a><a class="btn alt" href="https://www.figma.com/proto/QFIiMAYlIj9VM2qR00I71D/whatsapp-case-study?node-id=63-6102&amp;t=saOtdpKwhm7QcoT3-1" target="_blank" rel="noopener">View Figma prototype</a></div>
+    <div class="mock"><div class="phone">
+        <div class="t">Monica</div>
+        <div class="bub">Happy birthday!! 🎂</div>
+        <div class="pop"><b>Schedule message</b><span>Tomorrow · 9:00 PM</span></div>
+        <div class="send"></div>
+        <div class="conf">Long-press Send to schedule</div>
+      </div></div>
+
+      <h3 class="sub">Understanding the users</h3>
+      <h3 style="font-size:20px;margin-top:8px">Research evidence</h3><p>I used an online survey with 19 WhatsApp users to understand when people need to send messages later, what they do today, and what makes timing difficult.</p><h3 style="font-size:16px;margin-top:20px">What I looked for</h3><div class="grid"><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Context</small><p style="color:var(--ink)">When do people need to send messages later?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Current behaviour</small><p style="color:var(--ink)">What workarounds do they use today?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Pain points</small><p style="color:var(--ink)">What makes sending at the right moment difficult?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Expectations</small><p style="color:var(--ink)">What would make sending later easier?</p></div></div>
+      <div class="grid">
+        <div class="card stat"><b>18/19</b><p>have wanted to send a WhatsApp message at a specific future time</p></div>
+        <div class="card stat"><b>9/19</b><p>worry they would be busy or asleep at that moment</p></div>
+        <div class="card stat"><b>6/19</b><p>worry they would forget</p></div>
+        <div class="card stat"><b>9/19</b><p>have needed to message someone in another time zone</p></div>
+      </div>
+      <h3 class="sub" style="font-size:20px;margin-top:36px">Users already build workarounds</h3>
+      <div class="br"><span>Set an alarm or reminder</span><i style="--w:100%"></i><b>6</b></div><div class="br"><span>Keep the message as a draft</span><i style="--w:83%"></i><b>5</b></div><div class="br"><span>Send or save it somewhere else</span><i style="--w:67%"></i><b>4</b></div><div class="br"><span>Wait and try to remember</span><i style="--w:33%"></i><b>2</b></div><div class="br"><span>Do nothing</span><i style="--w:33%"></i><b>2</b></div>
+      <h3 style="font-size:20px;margin-top:36px">Research takeaway</h3><p>The strongest pattern was not a need for another messaging feature. It was a need to separate <b style="color:var(--ink)">writing the message</b> from <b style="color:var(--ink)">being available to send it</b>.</p><div class="callout"><small>Key insight</small><h3>Users don't struggle to write the message. They struggle to be available at the right moment to send it.</h3><p>Not everyone saw scheduling as essential, and one respondent felt scheduled birthday wishes seem impersonal. That pushed me to keep the feature lightweight rather than a prominent part of the main messaging UI.</p></div>
+      <div class="card" style="margin-top:16px"><h3>The time-constrained communicator</h3><p>Regular WhatsApp users who plan messages in advance but may be unavailable or forgetful when it is time to send. They need to remember important messages, send at the intended time, avoid external reminders, and handle other time zones when needed. Today they use alarms, drafts and notes to themselves.</p></div>
+
+      <h3 class="sub">Design challenge</h3>
+      <p>How might we help users prepare and send important WhatsApp messages at the right time, without relying on memory or external reminders?</p>
+      <div class="grid">
+        <div class="card"><div class="n" style="background:var(--red)">01</div><h3>Reduce reliance on memory</h3><p>Scheduling replaces the alarm and the draft.</p></div>
+        <div class="card"><div class="n" style="background:var(--purple)">02</div><h3>Stay in the familiar flow</h3><p>Scheduling lives inside the existing composer.</p></div>
+        <div class="card"><div class="n" style="background:var(--cyan)">03</div><h3>Control before delivery</h3><p>Users can review, edit or delete before it sends.</p></div>
+        <div class="card"><div class="n" style="background:var(--green)">04</div><h3>Handle edge cases</h3><p>Time zones and delivery problems are planned for.</p></div>
+      </div>
+
+      <h3 class="sub">From insight to interaction</h3><p>The research helped define the problem, but it did not determine the interaction. I explored three entry points and compared them against three criteria: <b style="color:var(--ink)">discoverability, simplicity and fit with WhatsApp's existing mental model.</b></p>
+      <div class="xs">
+        <div><em class="no">✕</em><b>Dedicated schedule button</b><p>Adds another permanent control to the composer.</p></div>
+        <div><em class="mid">!</em><b>Three-dot menu</b><p>Hides an action people need at the right moment.</p></div>
+        <div class="pick"><em class="ok">✓</em><b>Long-press Send · selected</b><p>Keeps the composer clean and builds on an interaction people already know.</p></div>
+      </div>
+      <h3 class="sub">Why I designed it this way</h3>
+      <div class="grid">
+        <div class="card"><div class="n" style="background:var(--red)">A</div><h3>Why long press?</h3><p>Scheduling is available when needed, without another permanent control.</p></div>
+        <div class="card"><div class="n" style="background:var(--purple)">B</div><h3>Why one scheduling step?</h3><p>Date and time sit together so users say exactly when it sends, without moving through several screens.</p></div>
+        <div class="card"><div class="n" style="background:var(--cyan)">C</div><h3>Why a separate section?</h3><p>Scheduled messages stay apart from active chats, so upcoming deliveries are easy to review.</p></div>
+        <div class="card"><div class="n" style="background:var(--green)">D</div><h3>Why keep editing available?</h3><p>Editing or deleting until delivery reduces the risk of sending an outdated message.</p></div>
+      </div>
+
+      <h3 class="sub">Final interaction flow</h3><div class="flow"><span style="--c:var(--red)">Write message</span><i>→</i><span style="--c:var(--orange)">Long-press Send</span><i>→</i><span style="--c:var(--purple)">Choose date &amp; time</span><i>→</i><span style="--c:var(--cyan)">Review</span><i>→</i><span style="--c:var(--green)">Schedule</span><i>→</i><span style="--c:var(--blue)">Manage before delivery</span></div><p style="margin-top:14px">The final flow keeps scheduling close to the moment of sending, while giving users control over the message before it is delivered.</p><h3 class="sub">Edge cases I considered</h3>
+      <p>Some survey respondents said a scheduled message must still send if the phone is offline, locked or out of battery. That turned delivery reliability into a real product requirement.</p>
+      <div class="chips"><span class="chip">Phone offline at send time</span><span class="chip">Message edited or deleted before delivery</span><span class="chip">Time-zone change</span><span class="chip">Delivery failure</span></div>
+
+      <h3 class="sub">Testing and iteration <span class="chip" style="vertical-align:middle;font-size:12px">Initial usability test · 3 participants</span></h3>
+      <p>I tested the prototype with 3 WhatsApp users to evaluate three things: whether users could discover scheduling, understand the scheduling flow, and find and manage a scheduled message without additional guidance.</p>
+      <h3 style="font-size:18px;margin-top:24px">Tasks tested</h3>
+      <div class="chips"><span class="chip">Schedule a message for a specific date and time</span><span class="chip">Find the scheduled message</span><span class="chip">Manage the scheduled message</span></div>
+      <h3 style="font-size:20px;margin-top:36px">What I heard</h3>
+      <div class="grid">
+        <div class="card"><div class="n" style="background:var(--green)">01</div><h3>The core flow was easy to understand</h3><p style="color:var(--ink);font-style:italic;margin-top:8px">“It's good and well executed.”</p><p style="margin-top:8px">One participant rated the experience 8/10 and understood what was happening throughout the prototype.</p></div>
+        <div class="card"><div class="n" style="background:var(--orange)">02</div><h3>Scheduled messages could be easier to navigate</h3><p>One participant found themselves scrolling repeatedly to view the scheduled message.</p><p style="color:var(--ink);font-style:italic;margin-top:8px">“The UI could be improved, as I had to scroll repeatedly to find and view the scheduled message.”</p><p style="margin-top:8px"><b style="color:var(--ink)">Insight:</b> the flow was understandable, but reaching scheduled messages could be more convenient.</p></div>
+        <div class="card"><div class="n" style="background:var(--purple)">03</div><h3>The entry point can be explored further</h3><p>One participant found Schedule Message easy to discover within the available actions, but suggested placing it in the attachment menu alongside Maps and Contacts.</p></div>
+      </div>
+      <h3 style="font-size:20px;margin-top:36px">Alternative explored</h3>
+      <div class="xs">
+        <div class="pick"><em class="ok">✓</em><b>Send button → long press → Schedule message</b><p>Kept. Scheduling directly controls when the message is sent, so it stays tied to Send.</p></div>
+        <div><em class="mid">!</em><b>Attachment menu → Schedule message</b><p>Could make the feature easier to find, but groups scheduling with content attachments, which may be a less intuitive mental model.</p></div>
+      </div>
+      <h3 style="font-size:20px;margin-top:36px">What testing highlighted</h3><p>The test did not reveal a problem with the core scheduling interaction. Instead, it highlighted two opportunities: making scheduled messages easier to locate and making the long-press interaction more discoverable.</p>
+      <div class="grid">
+        <div class="card"><div class="n" style="background:var(--cyan)">A</div><h3>Navigation</h3><p>Make scheduled messages easier to locate and review, with less scrolling.</p></div>
+        <div class="card"><div class="n" style="background:var(--red)">B</div><h3>Discoverability</h3><p>Keep the scheduling action accessible while exploring whether a subtle affordance could make the long-press easier to discover.</p></div>
+      </div>
+      <div class="callout"><small>Testing takeaway</small><h3>The core scheduling experience was easy to understand. Testing revealed room to improve navigation and the discoverability of the scheduling entry point.</h3></div>
+      <h3 class="sub">What I would test next</h3><p>The initial test focused on usability of the prototype. The next round would test the revised experience with a larger and more varied group of WhatsApp users.</p><div class="grid"><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Discoverability</small><p style="color:var(--ink)">Can users find scheduling without being told where it is?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Navigation</small><p style="color:var(--ink)">Can users quickly find and manage scheduled messages?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Time selection</small><p style="color:var(--ink)">Do users understand the date and time controls?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Trust</small><p style="color:var(--ink)">Do users feel confident that the message will send at the selected time?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Edge cases</small><p style="color:var(--ink)">What do users expect when the device is offline or the time zone changes?</p></div></div>
+    <a class="btn" href="https://www.behance.net/gallery/253591055/WhatsApp-Message-Scheduling-UX-Case-Study" target="_blank" rel="noopener">View on Behance</a><a class="btn alt" href="https://www.figma.com/proto/QFIiMAYlIj9VM2qR00I71D/whatsapp-case-study?node-id=63-6102&amp;t=saOtdpKwhm7QcoT3-1" target="_blank" rel="noopener">View Figma prototype</a>
+  </div></section>
+</main>
+<main id="cs2" hidden>
+  <section class="fw"><div class="frame">
+    <a class="back" href="#case">← Back to portfolio</a>
+    <div class="chips" style="margin:0 0 16px"><span class="chip">Concept project</span><span class="chip">UX exploration</span><span class="chip">Interaction design</span><span class="chip">AI UX</span><span class="chip">Prototyping</span></div>
+    <h2>Spotify Sing Mode: making karaoke feel like a natural part of listening</h2>
+    <p>Spotify is already a place where people listen to music and follow lyrics. I explored how a Sing Mode could extend that behaviour into a lightweight karaoke experience, without making Spotify feel like a separate karaoke app.</p>
+    <div><a class="btn" href="https://www.behance.net/gallery/252931111/Spotify-Sing-Mode-Reimagining-Karaoke-Inside-Spotify" target="_blank" rel="noopener">View on Behance</a><a class="btn alt" href="https://www.figma.com/proto/qFQYxLNIcu7QKn788gkJ3D/spotify-case-study?node-id=8-80&amp;viewport=-1980%2C626%2C0.29&amp;t=IHSuHKcGztqhDwBa-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=64%3A286&amp;page-id=0%3A1" target="_blank" rel="noopener">View Figma prototype</a></div>
+    <div class="mock" style="background:linear-gradient(135deg,var(--green),var(--cyan))"><div class="phone"><div class="t">Sing Mode</div><div class="l">Line before</div><div class="l a">The line you're singing now</div><div class="l">Line after</div><div class="modes"><span class="s">Full</span><span>Lower</span><span>Minimal</span></div><div class="conf">Vocal level</div></div></div>
+
+    <h3 class="sub">The opportunity</h3><p>Spotify already supports two parts of the karaoke experience: listening to music and following lyrics. The opportunity I explored was what happens when a listener wants to move from <b style="color:var(--ink)">passively following lyrics to actively singing</b>.</p><div class="callout"><small>Design challenge</small><h3>How might we make singing along feel like a natural extension of Spotify's existing listening experience without disrupting the core listening flow?</h3></div><h3 style="font-size:20px;margin-top:36px">Scope of exploration</h3><p>This was a concept exploration rather than a validated product study. Instead of making assumptions about a large user population, I focused the project on exploring the interaction model, the transition between listening and singing, and how AI feedback could be communicated responsibly.</p>
+
+    <h3 class="sub">Understanding the opportunity</h3>
+    <p>Rather than redesigning all of Spotify, I focused on one specific behaviour and explored how Sing Mode could fit into the existing player without disrupting the familiar listening experience.</p>
+    <div class="flow"><span style="--c:var(--red)">Listen</span><i>→</i><span style="--c:var(--orange)">Decide to sing</span><i>→</i><span style="--c:var(--purple)">Sing along</span><i>→</i><span style="--c:var(--cyan)">Return to listening</span></div>
+    <div class="grid">
+      <div class="card"><div class="n" style="background:var(--red)">01</div><h3>Keep Spotify familiar</h3><p>Build on existing interaction patterns instead of a brand-new experience.</p></div>
+      <div class="card"><div class="n" style="background:var(--purple)">02</div><h3>Easy to discover</h3><p>Users should know where to start singing without instructions.</p></div>
+      <div class="card"><div class="n" style="background:var(--cyan)">03</div><h3>Give users control</h3><p>Users decide how much of the original vocals they hear.</p></div>
+      <div class="card"><div class="n" style="background:var(--green)">04</div><h3>Make feedback useful</h3><p>If AI is involved, it should explain performance, not just score it.</p></div>
+    </div>
+
+    <h3 class="sub">Exploring the solution</h3>
+    <p>I explored different ways of introducing Sing Mode into Spotify.</p>
+    <div class="xs">
+      <div><em class="no">✕</em><b>Dedicated Sing Mode</b><p>A separate mode gives karaoke its own space, but can feel disconnected from normal listening.</p></div>
+      <div><em class="mid">!</em><b>Sing Mode inside the player</b><p>Easy to reach, but player controls already compete for attention, so it must stay lightweight.</p></div>
+      <div class="pick"><em class="ok">✓</em><b>Integrated into the listening flow · selected</b><p>Playing a song, starting Sing Mode, singing along and returning to listening stays one simple path.</p></div>
+    </div>
+
+    <h3 class="sub">The experience</h3>
+    <div class="grid">
+      <div class="card"><div class="n" style="background:var(--red)">01</div><h3>Start singing</h3><p>Activate Sing Mode straight from the music player, close to existing playback controls.</p></div>
+      <div class="card"><div class="n" style="background:var(--purple)">02</div><h3>Follow the lyrics</h3><p>Lyrics become the main focus, without unnecessary extra controls.</p></div>
+      <div class="card"><div class="n" style="background:var(--cyan)">03</div><h3>Control the vocals</h3><p>Full vocals, lower vocals or minimal vocals, for casual singing or practice.</p></div>
+      <div class="card"><div class="n" style="background:var(--green)">04</div><h3>AI singing feedback</h3><p>The concept explores AI-assisted feedback on pitch, timing, consistency and areas to improve, not just a single performance score.</p></div>
+    </div>
+
+    <h3 class="sub">Interaction flow</h3><div class="flow"><span style="--c:var(--red)">Listening</span><i>→</i><span style="--c:var(--orange)">Start Sing Mode</span><i>→</i><span style="--c:var(--purple)">Follow lyrics</span><i>→</i><span style="--c:var(--cyan)">Adjust vocal level</span><i>→</i><span style="--c:var(--green)">Sing</span><i>→</i><span style="--c:var(--blue)">Receive feedback</span><i>→</i><span style="--c:var(--red)">Return to listening</span></div><p style="margin-top:14px">The flow keeps the new capability connected to Spotify's existing listening behaviour instead of creating a separate karaoke experience.</p>
+    <h3 class="sub">AI UX: designing feedback users can understand</h3>
+    <p>I did not want AI to act as a black-box judge that produces a score without explanation. I explored a feedback model where the system communicates <b style="color:var(--ink)">what it observed, how the user performed, and what could be improved.</b></p>
+    <div class="chips" style="margin-top:16px"><span class="chip">Example AI feedback</span></div>
+    <div class="grid">
+      <div class="card"><small style="color:var(--green);font-weight:600;font-size:13px">Pitch</small><h3>Good</h3><p>Your notes stayed close to the original melody.</p></div>
+      <div class="card"><small style="color:var(--orange);font-weight:600;font-size:13px">Timing</small><h3>Needs practice</h3><p>You came in slightly late on some lines.</p></div>
+      <div class="card"><small style="color:var(--green);font-weight:600;font-size:13px">Consistency</small><h3>Good</h3><p>Your performance stayed stable through the section.</p></div>
+    </div>
+    <h3 style="font-size:20px;margin-top:36px">Designing for uncertainty</h3><p>AI-generated feedback should not be presented as certain when the system has weak input. If microphone quality, background noise or the song itself makes analysis unreliable, the interface should communicate that uncertainty rather than presenting an inaccurate result as fact.</p><h3 style="font-size:20px;margin-top:36px">A coach, not a judge</h3><p>Feedback should feel supportive, so users can keep singing without every performance being graded.</p><h3 style="font-size:16px;margin-top:24px">AI feedback principles</h3><div class="grid"><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Explainable</small><p style="color:var(--ink)">Tell users what the system observed.</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Actionable</small><p style="color:var(--ink)">Give users something they can improve.</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Uncertain when necessary</small><p style="color:var(--ink)">Avoid presenting weak analysis as fact.</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Supportive</small><p style="color:var(--ink)">Help users practise rather than feel judged.</p></div></div>
+
+    <h3 class="sub">Key design decisions</h3>
+    <div class="grid">
+      <div class="card"><div class="n" style="background:var(--red)">A</div><h3>Why integrate into the player?</h3><p>The behaviour starts from listening to a song, so keeping it in the player makes the switch feel natural.</p></div>
+      <div class="card"><div class="n" style="background:var(--purple)">B</div><h3>Why optional vocal control?</h3><p>Some want the singer clearly audible, others want to practise with reduced vocals.</p></div>
+      <div class="card"><div class="n" style="background:var(--cyan)">C</div><h3>Why explain AI feedback?</h3><p>A score alone does not say how to improve. Areas like pitch and timing make it useful.</p></div>
+      <div class="card"><div class="n" style="background:var(--green)">D</div><h3>Why keep it lightweight?</h3><p>Spotify is still about listening. Sing Mode should enhance that, not compete with it.</p></div>
+    </div>
+
+    <h3 class="sub">Edge cases I considered</h3>
+    <div class="chips"><span class="chip">Low-quality microphone input</span><span class="chip">Background noise</span><span class="chip">Instrumental or unusual tracks</span><span class="chip">Low confidence in the analysis</span></div>
+    <p style="margin-top:12px">When the system is unsure, for example because of noise or a poor microphone, it should say so instead of showing an inaccurate score as fact.</p>
+
+    <h3 class="sub">Validation plan <span class="chip" style="vertical-align:middle;font-size:12px">Not yet tested</span></h3><p>This concept has not yet been usability tested, so I have treated these decisions as hypotheses rather than validated findings.</p><h3 style="font-size:16px;margin-top:20px">What I would test</h3><div class="grid"><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Discovery</small><p style="color:var(--ink)">Can users find Sing Mode without instructions?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Interaction</small><p style="color:var(--ink)">Do users understand how to start and stop singing?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Vocal control</small><p style="color:var(--ink)">Do users understand the difference between Full, Lower and Minimal vocals?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">AI feedback</small><p style="color:var(--ink)">Can users understand what the feedback means and what to improve?</p></div><div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Product fit</small><p style="color:var(--ink)">Does Sing Mode still feel like part of Spotify rather than a separate karaoke product?</p></div></div><h3 style="font-size:16px;margin-top:24px">Success criteria</h3><p>Users should be able to discover, start, sing, understand feedback and exit without additional instructions.</p><div class="flow"><span style="--c:var(--red)">Discover</span><i>→</i><span style="--c:var(--orange)">Start</span><i>→</i><span style="--c:var(--purple)">Sing</span><i>→</i><span style="--c:var(--cyan)">Understand feedback</span><i>→</i><span style="--c:var(--green)">Exit</span></div>
+
+    <div class="callout" style="border-left-color:var(--green)"><small style="color:var(--green)">What I learned</small><h3>How to introduce a new capability into an established product without disrupting its mental model.</h3><p>It also pushed me past simply adding AI, to asking what the AI should tell the user, how confident it should be, and how the user can understand why it gave that feedback.</p></div>
+
+    <h3 class="sub">Project details</h3>
+    <div class="grid">
+      <div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Role</small><p style="color:var(--ink)">UX/UI Designer</p></div>
+      <div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Type</small><p style="color:var(--ink)">Concept project</p></div>
+      <div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Focus</small><p style="color:var(--ink)">Interaction design, AI UX, product thinking</p></div>
+      <div class="card"><small style="color:var(--blue);font-weight:600;font-size:13px">Tools</small><p style="color:var(--ink)">Figma</p></div>
+    </div>
+    <a class="btn" href="https://www.behance.net/gallery/252931111/Spotify-Sing-Mode-Reimagining-Karaoke-Inside-Spotify" target="_blank" rel="noopener">View on Behance</a><a class="btn alt" href="https://www.figma.com/proto/qFQYxLNIcu7QKn788gkJ3D/spotify-case-study?node-id=8-80&amp;viewport=-1980%2C626%2C0.29&amp;t=IHSuHKcGztqhDwBa-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=64%3A286&amp;page-id=0%3A1" target="_blank" rel="noopener">View Figma prototype</a>
+  </div></section>
+</main>
+<div id="ov" aria-hidden="true"><svg id="pv"></svg></div><div id="cap" aria-hidden="true"></div>
+<div class="res" id="res" hidden><h4>Colours · click to copy</h4><button data-c="#f24e1e"><i style="--k:#f24e1e"></i>Red<span>#F24E1E</span></button><button data-c="#ff7262"><i style="--k:#ff7262"></i>Orange<span>#FF7262</span></button><button data-c="#a259ff"><i style="--k:#a259ff"></i>Purple<span>#A259FF</span></button><button data-c="#1abcfe"><i style="--k:#1abcfe"></i>Cyan<span>#1ABCFE</span></button><button data-c="#0bb87a"><i style="--k:#0bb87a"></i>Green<span>#0BB87A</span></button><h4>Fonts</h4><div class="rf">Space Grotesk<span>Headings</span></div><div class="rf">Public Sans<span>Body</span></div></div>
+<div class="toast" id="toast"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function(){
+  var toast=document.getElementById('toast'),t;
+  function say(m){toast.textContent=m;toast.classList.add('show');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('show')},1800)}
+  var dev=document.getElementById('dev');
+  dev.onclick=function(){var on=document.body.classList.toggle('dev');dev.classList.toggle('on',on);dev.setAttribute('aria-pressed',on);say(on?'Dev mode on: spacing specs visible':'Dev mode off')};
+  document.getElementById('theme').onclick=function(){
+    var r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+    r.dataset.theme=dark?'light':'dark'};
+  var links=[].slice.call(document.querySelectorAll('.layers a'));
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)});
+      document.querySelectorAll('.fw').forEach(function(f){f.classList.toggle('sel',f===e.target)})}})},{rootMargin:'-40% 0px -50% 0px'});
+  document.querySelectorAll('.fw').forEach(function(s){io.observe(s)});
+  var pal=['#f24e1e','#a259ff','#0d99ff','#0bb87a'],last=-1,sel='main h1,main h2,main h3,main p,main .chip,main .tl small,main .st small';
+  document.addEventListener('mouseover',function(e){var el=e.target.closest&&e.target.closest(sel);if(!el)return;
+    var i;do{i=Math.floor(Math.random()*pal.length)}while(i===last);last=i;el.style.color=pal[i]});
+  document.addEventListener('mouseout',function(e){var el=e.target.closest&&e.target.closest(sel);if(el&&!el.contains(e.relatedTarget))el.style.color=''});
+  var fw=document.getElementById('process'),pf=document.getElementById('pf'),view=pf.querySelector('.view'),ctx,rt,tl,played=false;
+  function build(){
+    if(ctx)ctx.revert();tl=null;
+    var still=!window.gsap||matchMedia('(prefers-reduced-motion:reduce)').matches;
+    pf.classList.toggle('static',still);if(still){view.scrollLeft=0;return}
+    ctx=gsap.context(function(){
+      var track=document.getElementById('track'),W=view.clientWidth,TW=track.scrollWidth,dist=TW-W,
+          sts=gsap.utils.toArray('.st',track),n=sts.length,sc={v:0};
+      view.scrollLeft=0;
+      tl=gsap.timeline({paused:true,defaults:{ease:'none'}});
+      sts.forEach(function(el,i){
+        var x=Math.max(0,Math.min(dist,el.offsetLeft+el.offsetWidth/2-W*.55)),f=i===n-1?1:(el.offsetLeft+20)/TW;
+        tl.to(sc,{v:x,duration:.6,ease:'power1.inOut',onUpdate:function(){view.scrollLeft=sc.v}},i)
+          .to('.prog',{scaleX:f,duration:.6,ease:'power1.inOut'},i)
+          .fromTo(el.querySelector('.dot'),{scale:0},{scale:1,duration:.25,ease:'back.out(2)'},i+.15)
+          .fromTo(el.querySelector('.stem'),{scaleY:0},{scaleY:1,duration:.25},i+.15)
+          .fromTo(el.querySelector('.c'),{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:'power2.out'},i+.25);
+      });
+      tl.timeScale(.6);
+    },fw);
+    if(played&&tl)tl.progress(1);
+  }
+  build();
+  if(window.IntersectionObserver)new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!played&&tl){played=true;tl.play()}})},{threshold:.5}).observe(pf);
+  ['pointerdown','wheel'].forEach(function(t){view.addEventListener(t,function(){if(tl&&tl.isActive())tl.progress(1)},{passive:true})});
+  var lw=innerWidth;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(innerWidth!==lw){lw=innerWidth;build()}},250)});
+  var ov=document.getElementById('ov'),pv=document.getElementById('pv'),cap=document.getElementById('cap'),res=document.getElementById('res'),
+      mv=document.querySelector('.move'),tools=[].slice.call(document.querySelectorAll('.tool')),tool='move',items=[],dr=null,
+      hints={rect:'Rectangle: drag on the page',pen:'Pen: drag to draw. Esc to exit',text:'Text: click to type',comment:'Comment: click to add one'};
+  function sync(){var h=document.documentElement.scrollHeight+'px';ov.style.height=h;cap.style.height=h}
+  function acts(){mv.classList.toggle('act',tool==='move');tools.forEach(function(b){var t=b.dataset.t;
+    b.classList.toggle('act',t===tool||(t==='frame'&&document.body.classList.contains('frames'))||(t==='res'&&!res.hidden))})}
+  function setTool(t,quiet){tool=t;var d=t==='rect'||t==='pen'||t==='text'||t==='comment';
+    sync();cap.style.display=d?'block':'none';cap.dataset.t=t;acts();if(d&&!quiet)say(hints[t])}
+  function fade(el,ms){clearTimeout(el._t);el._t=setTimeout(function(){el.classList.add('fo');
+    el._t=setTimeout(function(){el.remove();items=items.filter(function(i){return i!==el})},450)},ms)}
+  function hold(el){clearTimeout(el._t);el.classList.remove('fo')}
+  function undo(){var i=items.pop();if(i)i.remove()}
+  function clearDraw(){items.forEach(function(i){i.remove()});items=[];setTool('move',true)}
+  mv.onclick=function(){setTool('move',true)};
+  tools.forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+    if(t==='frame'){var on=document.body.classList.toggle('frames');say(on?'Frame names on':'Frame names off');acts()}
+    else if(t==='res'){res.hidden=!res.hidden;acts()}
+    else setTool(tool===t?'move':t)}});
+  [].slice.call(res.querySelectorAll('button')).forEach(function(b){b.onclick=function(){var c=b.dataset.c;
+    try{navigator.clipboard.writeText(c).then(function(){say('Copied '+c)},function(){say(c)})}catch(e){say(c)}}});
+  function fin(){if(!dr)return;
+    if(dr.k==='rect'){if(dr.w<4||dr.h<4)dr.el.remove();else{items.push(dr.el);fade(dr.el,1000)}setTool('move',true)}
+    else if(dr.el.getTotalLength&&dr.el.getTotalLength()>3){items.push(dr.el);fade(dr.el,1000)}else dr.el.remove();
+    dr=null}
+  cap.addEventListener('pointerdown',function(e){
+    var x=e.pageX,y=e.pageY,pos='left:'+x+'px;top:'+y+'px';
+    if(tool==='rect'){var d=document.createElement('div');d.className='orc';d.style.cssText=pos;var em=document.createElement('em');d.appendChild(em);ov.appendChild(d);dr={k:'rect',el:d,em:em,x:x,y:y,w:0,h:0}}
+    else if(tool==='pen'){var p=document.createElementNS('http://www.w3.org/2000/svg','path'),dd='M'+x+' '+y;p.setAttribute('d',dd);pv.appendChild(p);dr={k:'pen',el:p,d:dd}}
+    else if(tool==='text'||tool==='comment'){
+      var c=tool==='comment',el=document.createElement('div');el.style.cssText=pos;
+      if(c){el.className='ocm';el.innerHTML='<i>Y</i><span contenteditable="true"></span>'}else{el.className='otx';el.contentEditable='true'}
+      ov.appendChild(el);items.push(el);setTool('move',true);
+      var ed=c?el.querySelector('span'):el;
+      ed.addEventListener('focus',function(){hold(el)});
+      ed.addEventListener('blur',function(){if(!ed.textContent.trim()){el.remove();items=items.filter(function(i){return i!==el})}else fade(el,2500)});
+      ed.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key==='Escape'){ev.preventDefault();ed.blur()}});
+      setTimeout(function(){ed.focus()},30);return}
+    if(dr)cap.setPointerCapture(e.pointerId)});
+  cap.addEventListener('pointermove',function(e){if(!dr)return;
+    if(dr.k==='rect'){dr.w=Math.abs(e.pageX-dr.x);dr.h=Math.abs(e.pageY-dr.y);
+      dr.el.style.cssText='left:'+Math.min(dr.x,e.pageX)+'px;top:'+Math.min(dr.y,e.pageY)+'px;width:'+dr.w+'px;height:'+dr.h+'px';
+      dr.em.textContent=Math.round(dr.w)+' × '+Math.round(dr.h)}
+    else{dr.d+=' L'+e.pageX+' '+e.pageY;dr.el.setAttribute('d',dr.d)}});
+  cap.addEventListener('pointerup',fin);cap.addEventListener('pointercancel',fin);
+  addEventListener('keydown',function(e){
+    if(e.target.isContentEditable)return;var k=e.key.toLowerCase();
+    if((e.ctrlKey||e.metaKey)&&k==='z'){undo();e.preventDefault();return}
+    if(e.ctrlKey||e.metaKey||e.altKey)return;
+    var mp={v:'move',r:'rect',p:'pen',t:'text',c:'comment'};
+    if(mp[k])setTool(mp[k]);
+    else if(k==='f'){document.querySelector('.tool[data-t="frame"]').click()}
+    else if(k==='escape'){setTool('move',true);res.hidden=true;acts()}
+    else if(k==='delete'||k==='backspace')undo()});
+  var home=document.getElementById('home'),pages={'#/whatsapp-timed-messages':document.getElementById('cs'),'#/spotify-sing-mode':document.getElementById('cs2')},was=false;
+  function route(){
+    var pg=pages[location.hash],on=!!pg;
+    if(on!==was)clearDraw();
+    home.hidden=on;Object.keys(pages).forEach(function(h){pages[h].hidden=pages[h]!==pg});document.body.classList.toggle('cs',on);
+    if(on)scrollTo({top:0,behavior:'auto'});
+    else if(was){build();var h=location.hash,t=h.length>1&&h[1]!=='/'?document.querySelector(h):null;t?t.scrollIntoView({behavior:'auto'}):scrollTo({top:0,behavior:'auto'})}
+    was=on;
+  }
+  addEventListener('hashchange',route);route();
+  var sws=[].slice.call(document.querySelectorAll('.sw')),rootEl=document.documentElement;
+  sws.forEach(function(b){b.onclick=function(){
+    var on=b.getAttribute('aria-pressed')==='true';
+    sws.forEach(function(x){x.setAttribute('aria-pressed','false')});
+    if(on){rootEl.style.removeProperty('--blue');say('Accent: default blue')}
+    else{b.setAttribute('aria-pressed','true');rootEl.style.setProperty('--blue',b.dataset.c);say('Accent: '+b.dataset.n)}
+  }});
+  document.querySelectorAll('.btn').forEach(function(b){
+    var q=document.createElement('span');q.className='bsel';q.setAttribute('aria-hidden','true');q.innerHTML='<i></i><i></i><i></i><i></i><em></em>';
+    var m=document.createElement('span');m.className='mc';m.setAttribute('aria-hidden','true');m.innerHTML='<svg width="14" height="18" viewBox="0 0 16 20" fill="currentColor"><path d="M1 1l13 8-6 1.5L5 17z"/></svg><b>You</b>';
+    b.appendChild(q);b.appendChild(m);
+    var u=function(){q.querySelector('em').textContent=Math.round(b.offsetWidth)+' × '+Math.round(b.offsetHeight)};
+    b.addEventListener('mouseenter',u);b.addEventListener('focus',u);
+  });
+})();
+</script>
+</body>
+</html>
